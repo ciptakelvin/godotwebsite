@@ -1,4 +1,7 @@
 #file index.html
+class link
+	rel: stylesheet
+
 html
 	head
 		title
@@ -9,8 +12,8 @@ html
 			- name: viewport
 			  content: width=device-width, initial-scale=1.0
 		link
-			rel: stylesheet
-			href: /css/index.css
+			- href: /css/general.css
+			- href: /css/index.css
 	body
 		# Navbar
 		nav
@@ -86,4 +89,4 @@ html
 			p
 				text: GodotID © Since 2021
 
-#include style.nice
+#include styles/style.nice

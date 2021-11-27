@@ -1,8 +1,10 @@
 build:
-	nice index.nice .
+	nice index.nice public
 
 serve:
-	php -S localhost:8080
+	cd public;php -S localhost:8080
+
+test: build serve
 
 clean:
 	rm -f `find -path '*~' | tr '\n' ' '`
