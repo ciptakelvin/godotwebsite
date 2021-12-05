@@ -72,16 +72,21 @@ hero {
 			height: auto;
 		}
 	}
+
+	@media (screen and max-width: 660px) {
+		flex-direction: column-reverse;
+	}
 }
 
 section {
+	display: flex;
+
 	img {
 		max-width: 100%;
 		height: auto;
 	}
 
 	&#aturan {
-		display: flex;
 		justify-content: space-around;
 
 		> left {
@@ -90,7 +95,6 @@ section {
 	}
 
 	&#kegiatan {
-		display: flex;
 		justify-content: space-around;
 
 		> right {
@@ -99,7 +103,6 @@ section {
 	}
 
 	&#ctajoin {
-		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
@@ -118,6 +121,10 @@ section {
 				border-bottom: 1px solid gray;
 			}
 		}
+	}
+
+	@media (screen and max-width: 660px) {
+		flex-direction: column;
 	}
 }
 
