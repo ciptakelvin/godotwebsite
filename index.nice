@@ -90,3 +90,4 @@ html
 				text: GodotID © Since 2021
 
 #include styles/style.nice
+#include pages/karya.nice
