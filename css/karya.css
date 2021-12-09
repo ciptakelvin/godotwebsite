@@ -1,0 +1,21 @@
+product {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 3px;
+  border: 1px solid black;
+  transition: 0.75s;
+  cursor: pointer;
+}
+product > thumb {
+  width: 100%;
+  height: 124px;
+  background-size: cover;
+}
+product > b, product small {
+  padding: 5px;
+}
+product:hover {
+  background: black;
+  color: white;
+}

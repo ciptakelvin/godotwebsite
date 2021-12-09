@@ -1,0 +1,143 @@
+body {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  font-family: Ubuntu, Arial, sans-serif;
+  color: black;
+}
+body > *:not(nav) {
+  padding: 1rem 3rem;
+}
+
+p {
+  max-width: 40ch;
+}
+
+a {
+  color: black;
+  text-decoration: underline dotted;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+nav > div > a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav > div > a.cta {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: black;
+  color: white;
+}
+
+hero {
+  display: flex;
+}
+hero > left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  margin-right: 50px;
+}
+hero > right {
+  flex: 3;
+}
+hero > right > img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 660px) {
+  hero {
+    flex-direction: column-reverse;
+  }
+}
+
+section {
+  display: flex;
+}
+section img {
+  max-width: 100%;
+  height: auto;
+}
+section#aturan {
+  justify-content: space-around;
+}
+section#aturan > left {
+  width: 40%;
+}
+section#kegiatan {
+  justify-content: space-around;
+}
+section#kegiatan > right {
+  width: 40%;
+}
+section#ctajoin {
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+}
+section#ctajoin > .cta {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border-bottom: 3px solid gray;
+}
+section#ctajoin > .cta:hover {
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+}
+@media (max-width: 660px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+grid {
+  display: grid;
+}
+grid[size="2"] {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+grid[size="3"] {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+grid[size="4"] {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+grid[size="5"] {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+grid[size="6"] {
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+grid[size="7"] {
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+}
+grid[size="8"] {
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+}
+grid[size="9"] {
+  grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+}
+grid[size="10"] {
+  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+}
+
+img#logo {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 1px 0 black);
+}
