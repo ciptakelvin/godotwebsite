@@ -26,6 +26,7 @@ const creations = [
 	new Creation("MEGABEAST", "in a fantasy world... there are 3 magic crystals that have great powers, but one day the three crystals are taken by greedy creatures to create chaos in the world and create many evil creatures called MEGABEAST.", "MFauzan26", "https://mfproject.itch.io/megabeast", "https://user-images.githubusercontent.com/39972629/145329105-a15b70b0-c3e5-49e0-bd83-66c018468210.png"),
 	new Creation("PING 99", "PING 99 is a game where you have to get as many scores as possible by playing 3 games, sounds fun doesn't it? but is it fun if your internet is unstable?", "MFauzan26", "https://mfproject.itch.io/ld49", "https://user-images.githubusercontent.com/39972629/145329488-b61740ea-f08e-413b-9113-50ca84270594.png")
 ];
+creations.sort(() => Math.random() - 0.5);
 for (const creation of creations) {
 	grid.innerHTML += creation.toString();
 }
