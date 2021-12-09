@@ -26,8 +26,8 @@ html
 				a
 					- text: Galeri
 					  href: /galeri
-					- text: Karya
-					  href: /karya
+					- text: Home
+					  href: /
 					- text: Gabung
 					  href: https://t.me/godot_indonesia
 					  class: cta
