@@ -87,7 +87,7 @@ html
 		# Footer
 		footer
 			p
-				text: GodotID © Since 2021
+				text: We are no way affiliated with Godot Engine Team, please visit <a href="https://godotengine.org">their website</a> for more info
 
 # Pages
 #include pages/karya.nice
