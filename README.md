@@ -2,7 +2,7 @@
 Laman Resmi GodotID
 
 ## PERHATIAN
-Branch `main` tidak stabil. Yang stabil adalah branch `website`
+Branch manapun tidak stabil
 
 ## Known Problems
 ### Website not updated
