@@ -1,7 +1,8 @@
 #file css/general.css
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
-$primary: black;
+$primary: #C07166;
 $secondary: white;
+$paragraph: #646464;
 
 body {
 	appearance: none;
@@ -15,19 +16,35 @@ body {
 
 	color: $primary;
 
-	> *:not(nav) {
-		padding: 1rem 3rem;
+	> *:not(hero) {
+		padding: 1rem 5rem;
 	}
 }
 
 p {
 	max-width: 40ch;
+	color: $paragraph;
 }
 
 a {
 	color: $primary;
-
 	text-decoration: underline dotted;
+
+	&.cta-pr {
+		border: 1px solid white;
+		background: white;
+		padding: 7px 10px;
+		border-radius: 5px;
+		text-decoration: none;
+		
+		&-gh {
+			border: 1px dashed white;
+			color: white;
+			padding: 7px 10px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+	}
 
 	&:hover {
 		text-decoration: underline;
@@ -39,45 +56,56 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
+	gap: 1rem;
 
-	> div > a {
-		margin-left: 10px;
-		text-decoration: none;
-		font-weight: bold;
+	> hr {
+		flex: 1;
+		border: 0;
+		border-top: 1px solid;
+		color: #E5E5E5;
+	}
 
-		&.cta {
-			padding: 10px 20px;
-			border-radius: 5px;
+	> div {
+		display: flex;
+		gap: 10px;
 
-			background: $primary;
-			color: $secondary;
+		& > a {
+			color: white;
+			text-decoration: none;
 		}
 	}
 }
 
 hero {
 	display: flex;
+	flex-direction: column;
+	background: radial-gradient(69.22% 218.77% at 11.52% 25.9%, #C07166 0%, #C07166 23.97%, #D59087 100%);
+	padding: 10px;
 
-	> left {
+	> content {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		> left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
-		flex: 2;
-		margin-right: 50px;
-	}
-
-	> right {
-		flex: 3;
-
-		> img {
-			max-width: 100%;
-			height: auto;
+			flex: 2;
+			margin-right: 50px;
+			padding: 75px;
 		}
-	}
 
-	@media (screen and max-width: 660px) {
-		flex-direction: column-reverse;
+		> right {
+			flex: 3;
+
+			> img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (screen and max-width: 660px) {
+			flex-direction: column-reverse;
+		}
 	}
 }
 
@@ -143,11 +171,32 @@ grid {
 
 img {
 	&#logo {
-		width: 48px;
-		height: 48px;
-
-		filter: drop-shadow(0 1px 0 black);
+		width: 10rem;
 	}
+}
+
+flex {
+	display: flex;
+
+	&.column {
+		flex-direction: column;
+	}
+
+	&.row {
+		flex-direction: row;
+	}
+
+	&.gap {
+		gap: 10px;
+	}
+}
+
+.white {
+	color: white;
+}
+
+.hidden {
+	display: none;
 }
 
 #include styles/index.nice

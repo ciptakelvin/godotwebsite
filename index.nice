@@ -15,71 +15,63 @@ html
 			- href: /css/general.css
 			- href: /css/index.css
 	body
-		# Navbar
-		nav
-			img#logo
-				src: /imgs/logo.png
-			div
-				a
-					- text: Galeri
-					  href: /galeri
-					- text: Karya
-					  href: /karya
-					- text: Gabung
-					  href: https://t.me/godot_indonesia
-					  class: cta
 		# Hero
 		hero
+			# Navbar
+			nav
+				img#logo
+					src: /imgs/logo.svg
+				hr
+				div
+					a
+						- text: Fundraising
+						  href: /fundraising
+						- text: Galeri
+						  href: /galeri
+						- text: Karya
+						  href: #karya
+			content
+				left
+					h1.white
+						text: Komunitas Nomor 1 Godot Developer Indonesia
+					p.white
+						text: Join kuy
+					flex.row.gap
+						a.cta-pr
+							text: Lihat-Lihat
+							href: #model-komunitas
+						a.cta-pr-gh
+							text: Galeri
+							href: /galeri
+				right
+					img.hidden
+						src: /imgs/heroimage.png
+		# Model Komunitas
+		section#model-komunitas
 			left
-				h1
-					text: Komunitas Kolaborasi Game Developer Godot #1 Di Indonesia
+				h2
+					text: Model Komunitas Kami
 				p
-					text: Selamat datang di website kami
+					text: {
+						Komunitas kami menerapkan sistem open source untuk seluruh
+						produk yang telah kami buat. Berbagai kegiatan juga dapat
+						diselenggarakan di komunitas oleh para anggota.
+
+						Laporan keuangan kami dapat dilihat melalui budget.godot.id
+						secara langsung dan transparan.
+					}
 			right
-				img
-					src: /imgs/bonsai.png
-		# Aturan
-		section#aturan
-			left
-				img
-				@filter: drop-shadow(0 5px 4px #ff000080)
-					src: /imgs/stop.png
-			right
-				h3
-					text: Aturan Kami
-				p
-					text: Komunitas kami terjaga karena adanya aturan yang harus ditaati
-				ul
-					li
-						- text: Hormati satu sama lain
-						- text: No SARA
-						- text: OOT hanya pada jam istirahat atau hari libur
-						- text: Bertanyalah dengan efektif (<a href="https;//dontasktoask.com">DontAskToAsk</a>)
-				p
-					text: Simpel sekali bukan?
-		# Kegiatan Kami
-		section#kegiatan
-			left
-				h3
-					text: Kegiatan Kami
-				p
-					text: Komunitas yang aktif akan mencetak anggota yang kreatif
-				ul
-					li
-						- text: Game Jam
-						- text: Edukasi
-						- text: QnA santai
-						- text: Dll.
-			right
-				img
-					@filter: drop-shadow(3px 5px 10px #9a7d58)
-					src: /imgs/boxes.png
+				# nothing
+		# Karya Anggota
+		section#karya
+			h3
+				text: Karya Anggota
 		# Call To Action: Join
 		section#ctajoin
 			div
 				h3
 					text: Ayo Bergabung
-				p
+				p.white
 					text: Kami sangat menunggu kehadiranmu!
 			a.cta
 				text: Gabung Sekarang
@@ -87,7 +79,7 @@ html
 		# Footer
 		footer
 			p
-				text: We are no way affiliated with Godot Engine Team, please visit <a href="https://godotengine.org">their website</a> for more info
+				text: We are independent and in no way affiliated with the <a href="https://godotengine.org">Official Godot Team</a>
 
 # Pages
 #include pages/karya.nice
