@@ -4,6 +4,8 @@ $primary: #C07166;
 $secondary: white;
 $paragraph: #646464;
 
+$button-padding: 10px 20px;
+
 body {
 	appearance: none;
 	border: 0;
@@ -17,7 +19,7 @@ body {
 	color: $primary;
 
 	> *:not(hero) {
-		padding: 1rem 5rem;
+		padding: 2rem 5rem;
 	}
 }
 
@@ -33,15 +35,17 @@ a {
 	&.cta-pr {
 		border: 1px solid white;
 		background: white;
-		padding: 7px 10px;
+		padding: $button-padding;
 		border-radius: 5px;
 		text-decoration: none;
 		
 		&-gh {
-			border: 1px dashed white;
+			@extend .cta-pr;
+			background: transparent;
 			color: white;
-			padding: 7px 10px;
-			border-radius: 5px;
+		}
+
+		&:hover {
 			text-decoration: none;
 		}
 	}

@@ -1,0 +1,82 @@
+#file index.html
+class link
+	rel: stylesheet
+
+html
+	head
+		title
+			text: Komunitas GodotID | Game Developer Nusantara Indonesia
+		meta
+			- name: description
+			  content: Media kolaborasi sebentang nusantara tentang Game Development di game engine Godot
+			- name: viewport
+			  content: width=device-width, initial-scale=1.0
+		link
+			- href: /css/general.css
+			- href: /css/index.css
+	body
+		# Hero
+		hero
+			# Navbar
+			nav
+				img#logo
+					src: /imgs/logo.svg
+				hr
+				div
+					a
+						- text: Fundraising
+						  href: /fundraising
+						- text: Galeri
+						  href: /galeri
+						- text: Karya
+						  href: #karya
+			content
+				left
+					h1.white
+						text: Komunitas Nomor 1 Godot Developer Indonesia
+					p.white
+						text: Join kuy
+					flex.row.gap
+						a.cta-pr
+							text: Lihat-Lihat
+							href: #model-komunitas
+						a.cta-pr-gh
+							text: Galeri
+							href: /galeri
+				right
+					img.hidden
+						src: /imgs/heroimage.png
+		# Model Komunitas
+		section#model-komunitas
+			left
+				h2
+					text: Model Komunitas Kami
+				p
+					text: {
+						Komunitas kami menerapkan sistem open source untuk seluruh
+						produk yang telah kami buat. Berbagai kegiatan juga dapat
+						diselenggarakan di komunitas oleh para anggota.
+
+						Laporan keuangan kami dapat dilihat melalui budget.godot.id
+						secara langsung dan transparan.
+					}
+			right
+				# nothing
+		# Karya Anggota
+		section#karya
+			h3
+				text: Karya Anggota
+		# Call To Action: Join
+		section#ctajoin
+			div
+				h3
+					text: Ayo Bergabung
+				p.white
+					text: Kami sangat menunggu kehadiranmu!
+			a.cta
+				text: Gabung Sekarang
+				href: https://t.me/godot_indonesia
+		# Footer
+		footer
+			p
+				text: We are independent and in no way affiliated with the <a href="https://godotengine.org">Official Godot Team</a>
