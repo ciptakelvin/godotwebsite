@@ -9,7 +9,12 @@ body {
   color: #C07166;
 }
 body > *:not(hero) {
-  padding: 1rem 5rem;
+  padding: 2rem 5rem;
+}
+@media (max-width: 660px) {
+  body > *:not(hero) {
+    padding: 2rem;
+  }
 }
 
 p {
@@ -21,18 +26,18 @@ a {
   color: #C07166;
   text-decoration: underline dotted;
 }
-a.cta-pr {
+a.cta-pr, a.cta-pr-gh {
   border: 1px solid white;
   background: white;
-  padding: 7px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
 }
 a.cta-pr-gh {
-  border: 1px dashed white;
+  background: transparent;
   color: white;
-  padding: 7px 10px;
-  border-radius: 5px;
+}
+a.cta-pr:hover, a.cta-pr-gh:hover {
   text-decoration: none;
 }
 a:hover {
@@ -65,7 +70,6 @@ hero {
   display: flex;
   flex-direction: column;
   background: radial-gradient(69.22% 218.77% at 11.52% 25.9%, #C07166 0%, #C07166 23.97%, #D59087 100%);
-  padding: 10px;
 }
 hero > content {
   display: flex;
@@ -88,6 +92,9 @@ hero > content > right > img {
 @media (max-width: 660px) {
   hero > content {
     flex-direction: column-reverse;
+  }
+  hero > content > left {
+    padding: 2rem;
   }
 }
 
@@ -130,6 +137,9 @@ section#ctajoin > .cta:hover {
 @media (max-width: 660px) {
   section {
     flex-direction: column;
+  }
+  section#ctajoin {
+    align-items: flex-start;
   }
 }
 
