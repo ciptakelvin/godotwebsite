@@ -21,6 +21,12 @@ body {
 	> *:not(hero) {
 		padding: 2rem 5rem;
 	}
+	
+	@media (screen and max-width: 660px) {
+		> *:not(hero) {
+			padding: 2rem;
+		}
+	}
 }
 
 p {
@@ -84,7 +90,6 @@ hero {
 	display: flex;
 	flex-direction: column;
 	background: radial-gradient(69.22% 218.77% at 11.52% 25.9%, #C07166 0%, #C07166 23.97%, #D59087 100%);
-	padding: 10px;
 
 	> content {
 		display: flex;
@@ -109,6 +114,10 @@ hero {
 
 		@media (screen and max-width: 660px) {
 			flex-direction: column-reverse;
+
+			> left {
+				padding: 2rem;
+			}
 		}
 	}
 }
@@ -160,6 +169,10 @@ section {
 
 	@media (screen and max-width: 660px) {
 		flex-direction: column;
+
+		&#ctajoin {
+			align-items: flex-start;
+		}
 	}
 }
 
