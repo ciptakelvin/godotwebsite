@@ -1,4 +1,3 @@
-#file js/karya.js
 class Creation {
 	constructor(title, description, author, link, image) {
 		this.title = title;
@@ -7,9 +6,7 @@ class Creation {
 		this.link = link;
 		this.image = image;
 	}
-
 	toString() {
-		#TODO: Utilize NiceMarkup in browser (should be in v1.0)
 		return `
 			<product onclick="location.href='${this.link}'">
 				<thumb style="background-image: url(${this.image})"></thumb>
@@ -20,7 +17,6 @@ class Creation {
 			`;
 	}
 }
-
 const grid = document.getElementById("products");
 const creations = [
 	new Creation("BugBot", "Initiate war between two different allying enemy teams by applying commands to your robot.", "MFauzan26", "https://mfproject.itch.io/bugbot", "https://user-images.githubusercontent.com/39972629/145327974-396c8ad8-cb37-4e16-84d7-829c917b8576.png"),
@@ -30,9 +26,7 @@ const creations = [
 	new Creation("MEGABEAST", "in a fantasy world... there are 3 magic crystals that have great powers, but one day the three crystals are taken by greedy creatures to create chaos in the world and create many evil creatures called MEGABEAST.", "MFauzan26", "https://mfproject.itch.io/megabeast", "https://user-images.githubusercontent.com/39972629/145329105-a15b70b0-c3e5-49e0-bd83-66c018468210.png"),
 	new Creation("PING 99", "PING 99 is a game where you have to get as many scores as possible by playing 3 games, sounds fun doesn't it? but is it fun if your internet is unstable?", "MFauzan26", "https://mfproject.itch.io/ld49", "https://user-images.githubusercontent.com/39972629/145329488-b61740ea-f08e-413b-9113-50ca84270594.png")
 ];
-
 creations.sort(() => Math.random() - 0.5);
-
 for (const creation of creations) {
 	grid.innerHTML += creation.toString();
 }
