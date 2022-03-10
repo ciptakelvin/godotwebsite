@@ -15,6 +15,7 @@ module.exports = {
         }))
         return config;
     },
+    distDir: "build/", // build folders
     compress: true,
     poweredByHeader: false,
     reactStrictMode: false,

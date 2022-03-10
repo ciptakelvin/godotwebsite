@@ -2,3 +2,5 @@ public/*
 !public/imgs
 node_modules/
 *~
+.next/
+build/
