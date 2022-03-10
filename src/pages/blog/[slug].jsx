@@ -2,12 +2,15 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
+import Markdown from 'markdown-to-jsx';
 
 function BlogPage({ content }) {
     return (
         <div>
             <h1>Blog page</h1>
-            {content}
+            <Markdown>
+                {content}
+            </Markdown>
         </div>
     );
 }
